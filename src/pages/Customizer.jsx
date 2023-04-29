@@ -12,6 +12,22 @@ import { Tab, AIPicker, ColorPicker, CustomButton, FilePicker } from '../compone
 
 const Customizer = () => {
   const snap = useSnapshot(state)
+
+  const [file, setFile] = useState('');
+
+  const [prompt, setPrompt] = useState('');
+  const [generatingImg, setGeneratingImg] = useState(false);
+
+  const [activeEditorTab, setActiveEditorTab] = useState("");
+  const [activeFilterTab, setActiveFilterTab] = useState({
+    logoShirt: true,
+    stylishShirt: false,
+  });
+
+  //  show tab content depending on the activeTab
+  const generateTabContent = () => {}
+
+  
   return (
     <AnimatePresence>
       {!snap.intro && (
